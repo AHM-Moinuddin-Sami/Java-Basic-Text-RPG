@@ -47,7 +47,7 @@ public class Driver {
 				inp.nextLine(); //consuming trailing newline
 				if(choice == 1)
 				{
-					player = select.characterSelector();
+					player = select.characterSelector(inp);
 	            	movement.setPlayer(player);
 					run.run(player, movement, save, enemyStack);
 					break;

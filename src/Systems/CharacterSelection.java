@@ -12,8 +12,7 @@ public class CharacterSelection {
 	private Player mage = new Mage();
 	private Player assassin = new Assassin();
 	
-	public Player characterSelector() {
-		Scanner inp = new Scanner(System.in);
+	public Player characterSelector(Scanner inp) {
 		String choice;
 		while(true) {
 			System.out.println("Choose your class:");
@@ -26,7 +25,6 @@ public class CharacterSelection {
 			if(choice.equalsIgnoreCase("knight"))
 			{
 				System.out.println("You have chosen Knight");
-				inp.close();
 				return new Knight();
 			}
 			else if(choice.equalsIgnoreCase("status-knight"))
@@ -38,7 +36,6 @@ public class CharacterSelection {
 			else if(choice.equalsIgnoreCase("mage"))
 			{
 				System.out.println("You have chosen Mage");
-				inp.close();
 				return new Mage();
 			}
 			else if(choice.equalsIgnoreCase("status-mage"))
@@ -50,7 +47,6 @@ public class CharacterSelection {
 			else if(choice.equalsIgnoreCase("assassin"))
 			{
 				System.out.println("You have chosen Assassin");
-				inp.close();
 				return new Assassin();
 			}
 			else if(choice.equalsIgnoreCase("status-assassin"))

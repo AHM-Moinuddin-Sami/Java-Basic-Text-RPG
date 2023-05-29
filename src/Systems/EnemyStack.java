@@ -40,8 +40,10 @@ public class EnemyStack {
             stack = newStack;
         }
 
-        stack[++tos] = enemy;
-        length++;
+        if(enemy!=null) {
+        	stack[++tos] = enemy;
+            length++;
+        }
     }
 
     public Enemy pop() {
